@@ -34,13 +34,14 @@ Archivo `package.json`
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [fullstack, node, express],
+  "keywords": ['fullstack', 'node', 'express'],
   "author": "José Antonio Muñoz Jiménez",
   "license": "ISC"
 }
+
 ```
 
 
