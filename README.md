@@ -79,3 +79,18 @@ module.exports = {
   port       : process.env.PORT || 3000
 };
 ```
+
+
+**Actualizamos archivo `index.js`**
+
+```js
+const config  = require('./config');
+const express = require('express');
+const app     = express();
+
+app.listen (
+  config.port, 
+  config.ip, 
+  () => console.log (`Iniciado servidor en ${config.ip}:${config.port}`) 
+);
+```
