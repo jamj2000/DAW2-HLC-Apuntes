@@ -68,3 +68,14 @@ const app     = express();
 
 app.listen (3000, () => console.log ("Iniciado servidor")  );
 ```
+
+**Creamos archivo `config.js`**
+
+```js
+// El primer valor es el de PRODUCCIÓN. El valor alternativo es el de DESARROLLO
+
+module.exports = {
+  ip         : process.env.HOST || '0.0.0.0',
+  port       : process.env.PORT || 3000
+};
+```
