@@ -18,7 +18,7 @@ npm install -g concurrently
 > -  https://github.com/nodesource/distributions  (Distribución de binarios desde NodeSource)
 
 
-## INICIANDO PROYECTO
+## FULLSTACK1: INICIANDO PROYECTO
 
 ```bash
 mkdir  fullstack1  &&  cd  fullstack1
@@ -93,4 +93,32 @@ app.listen (
   config.ip, 
   () => console.log (`Iniciado servidor en ${config.ip}:${config.port}`) 
 );
+```
+
+**Actualizamos de nuevo archivo `index.js`**
+
+```js
+const config  = require('./config');
+const express = require('express');
+const app     = express();
+
+app.get (
+  '/',
+  (req, res) =>  res.send ({ mensaje: 'Bienvenido'})
+);
+
+app.listen (
+  config.port,
+  config.ip,
+  () => console.log (`Iniciado servidor en ${config.ip}:${config.port}`) 
+);
+```
+
+## FULLSTACK2: INICIANDO PROYECTO
+
+```bash
+sudo  npm  install  -g  create-react-app
+create-react-app  fullstack2
+cd  fullstack2
+npm  start 
 ```
