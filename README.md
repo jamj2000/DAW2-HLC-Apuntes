@@ -18,4 +18,29 @@ npm install -g concurrently
 > -  https://github.com/nodesource/distributions  (Distribución de binarios desde NodeSource)
 
 
-## 
+## INICIANDO PROYECTO
+
+```bash
+mkdir  fullstack1  &&  cd  fullstack1
+npm  init  --yes
+```
+
+Archivo `package.json`
+
+```json
+{
+  "name": "fullstack1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [fullstack, node, express],
+  "author": "José Antonio Muñoz Jiménez",
+  "license": "ISC"
+}
+```
+
+
