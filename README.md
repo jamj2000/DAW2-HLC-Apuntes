@@ -25,7 +25,7 @@ mkdir  fullstack1  &&  cd  fullstack1
 npm  init  --yes
 ```
 
-Archivo `package.json`
+**Archivo `package.json`**
 
 ```json
 {
@@ -44,4 +44,19 @@ Archivo `package.json`
 
 ```
 
+**Archivo `index.js`**
+
+```js
+const express = require('express');
+const app     = express();
+
+app.listen (3000);
+```
+
+**Instalamos módulo `express` e iniciamos aplicación.**
+
+```bash
+npm  install  express
+npm  start
+```
 
