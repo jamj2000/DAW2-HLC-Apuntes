@@ -60,3 +60,11 @@ npm  install  express
 npm  start
 ```
 
+**Añadimos callback en función `app.listen()`**
+
+```js
+const express = require('express');
+const app     = express();
+
+app.listen (3000, () => console.log ("Iniciado servidor")  );
+```
