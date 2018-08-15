@@ -144,3 +144,18 @@ npm  start
 ```bash
 npm install -g concurrently
 ```
+
+
+## MONGODB
+
+MongoDB es una base de datos noSQL muy usada actualmente. Se integra muy bien con las aplicaciones escritas en Javascript.
+
+
+**Operaciones CRUD**
+
+| Operación CRUD  | Equivalente SQL | MongoDB   | Mongoose
+|-----------------|-----------------|-----------|------------------------------------------|
+| C (Create)      | INSERT          | insert    | objeto.save                              |              
+| R (Read)        | SELECT          | find      | Modelo.find   / Modelo.findOne           |
+| U (Update)      | UPDATE          | update    | Modelo.update / Modelo.findOneAndUpdate  |
+| D (Delete)      | DELETE          | remove    | Modelo.remove / Modelo.findOneAndRemove  |
