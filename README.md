@@ -1,17 +1,35 @@
-# Desarrollo FullStack con MERN
+# Desarrollo FullStack
 
 
 ## INTRODUCCIÓN
 
+El desarrollo de una Aplicación Web FullStack abarca:
+
+- **BackEnd**
+- **FrontEnd**
+
+El Backend es la parte de la aplicación encargada de atender las peticiones HTTP que realiza la parte Frontend de la aplicación así como otros clientes web.
+
+Básicamente el Backend es un servidor HTTP. Además de atender las peticiones de los clientes, el backend también se encarga a menudo de acceder al SGBD que proporciona persistencia de los datos.
+
+El Frontend presenta al usuario la información obtenida del backend, así como proporciona a dicho usuario una interfaz para interactuar con la aplicación.
+
+En proyectos grandes suelen existir puestos laborales específicos para:
+
+- Desarrollador Backend
+- Desarrollador Frontend
+
+No obstante en algunos casos y en ciertos perfiles profesionales puede solicitarse a alguien con conocimientos en ambos cambos. En este caso el perfil es:
+
+- Desarrollador Fullstack
 
 
-## INSTALACIÓN DEL ENTORNO
+
+## INSTALACIÓN DEL ENTORNO DE TRABAJO
 
 ```bash 
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs build-essential
-
-npm install -g concurrently
+curl  -sL  https://deb.nodesource.com/setup_10.x  |  sudo  -E  bash  -
+sudo  apt-get  install  -y  nodejs  build-essential
 ```
 
 > Referencia: 
@@ -121,4 +139,8 @@ sudo  npm  install  -g  create-react-app
 create-react-app  fullstack2
 cd  fullstack2
 npm  start 
+```
+
+```bash
+npm install -g concurrently
 ```
