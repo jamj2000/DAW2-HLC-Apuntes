@@ -16,12 +16,12 @@ El Frontend presenta al usuario la información obtenida del backend, así como 
 
 En proyectos grandes suelen existir puestos laborales específicos para:
 
-- Desarrollador Backend
-- Desarrollador Frontend
+- **Desarrollador Backend**
+- **Desarrollador Frontend**
 
 No obstante en algunos casos y en ciertos perfiles profesionales puede solicitarse a alguien con conocimientos en ambos cambos. En este caso el perfil es:
 
-- Desarrollador Fullstack
+- **Desarrollador Fullstack**
 
 
 
