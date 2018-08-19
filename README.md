@@ -24,8 +24,23 @@ No obstante en algunos casos y en ciertos perfiles profesionales puede solicitar
 - **Desarrollador Fullstack**
 
 
+## INSTALACIÓN DE SERVIDOR DE BASE DE DATOS (MONGODB)
 
-## INSTALACIÓN DEL ENTORNO DE TRABAJO
+MongoDB es una base de datos noSQL muy usada actualmente. Se integra muy bien con las aplicaciones escritas en Javascript.
+
+
+**Operaciones CRUD**
+
+| Operación CRUD  | Equivalente HTTP | Equivalente SQL | MongoDB        | Mongoose                                 |
+|-----------------|------------------|-----------------|----------------|------------------------------------------|
+| C (Create)      | POST             | INSERT          | insert         | objeto.save                              |         
+| R (Read)        | GET              | SELECT          | find           | Modelo.find   / Modelo.findOne           |
+| U (Update)      | PUT              | UPDATE          | update         | Modelo.update / Modelo.findOneAndUpdate  |
+| D (Delete)      | DELETE           | DELETE          | remove         | Modelo.remove / Modelo.findOneAndRemove  |
+
+
+
+## INSTALACIÓN DE NODE.JS
 
 ```bash 
 curl  -sL  https://deb.nodesource.com/setup_10.x  |  sudo  -E  bash  -
@@ -36,10 +51,10 @@ sudo  apt-get  install  -y  nodejs  build-essential
 > -  https://github.com/nodesource/distributions  (Distribución de binarios desde NodeSource)
 
 
-## FULLSTACK1: INICIANDO PROYECTO
+## INICIANDO PROYECTO
 
 ```bash
-mkdir  fullstack1  &&  cd  fullstack1
+mkdir  proyecto  &&  cd  proyecto
 npm  init  --yes
 ```
 
@@ -47,7 +62,7 @@ npm  init  --yes
 
 ```json
 {
-  "name": "fullstack1",
+  "name": "proyecto",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -93,7 +108,6 @@ app.listen (3000, () => console.log ("Iniciado servidor")  );
 // El primer valor es el de PRODUCCIÓN. El valor alternativo es el de DESARROLLO
 
 module.exports = {
-  ip         : process.env.HOST || '0.0.0.0',
   port       : process.env.PORT || 3000
 };
 ```
@@ -106,10 +120,7 @@ const config  = require('./config');
 const express = require('express');
 const app     = express();
 
-app.listen (
-  config.port, 
-  config.ip, 
-  () => console.log (`Iniciado servidor en ${config.ip}:${config.port}`) 
+app.listen (config.port,  () => console.log (`Iniciado servidor en puerto ${config.port}`) 
 );
 ```
 
@@ -120,15 +131,10 @@ const config  = require('./config');
 const express = require('express');
 const app     = express();
 
-app.get (
-  '/',
-  (req, res) =>  res.send ({ mensaje: 'Bienvenido'})
+app.get ('/',  (req, res) =>  res.send ({ mensaje: 'Bienvenido'})
 );
 
-app.listen (
-  config.port,
-  config.ip,
-  () => console.log (`Iniciado servidor en ${config.ip}:${config.port}`) 
+app.listen (config.port, () => console.log (`Iniciado servidor en puerto ${config.port}`) 
 );
 ```
 
@@ -146,16 +152,3 @@ npm install -g concurrently
 ```
 
 
-## MONGODB
-
-MongoDB es una base de datos noSQL muy usada actualmente. Se integra muy bien con las aplicaciones escritas en Javascript.
-
-
-**Operaciones CRUD**
-
-| Operación CRUD  | Equivalente HTTP | Equivalente SQL | MongoDB        | Mongoose                                 |
-|-----------------|------------------|-----------------|----------------|------------------------------------------|
-| C (Create)      | POST             | INSERT          | insert         | objeto.save                              |         
-| R (Read)        | GET              | SELECT          | find           | Modelo.find   / Modelo.findOne           |
-| U (Update)      | PUT              | UPDATE          | update         | Modelo.update / Modelo.findOneAndUpdate  |
-| D (Delete)      | DELETE           | DELETE          | remove         | Modelo.remove / Modelo.findOneAndRemove  |
