@@ -1,7 +1,7 @@
 # Desarrollo FullStack
 
 
-## INTRODUCCIÓN
+## CONCEPTOS GENERALES
 
 El desarrollo de una Aplicación Web FullStack abarca:
 
